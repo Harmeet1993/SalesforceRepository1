@@ -1,0 +1,14 @@
+<apex:page controller="ApiPostalCode">
+
+  <apex:form >
+    <apex:commandButton value="Get Pincode" action="{!getpincode}"/>
+
+    Response is  
+
+
+
+
+ </apex:form>
+
+
+</apex:page>

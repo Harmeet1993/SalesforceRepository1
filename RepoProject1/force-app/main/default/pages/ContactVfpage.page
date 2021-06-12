@@ -1,0 +1,30 @@
+<apex:page controller="ContactVf">
+
+ <apex:form >
+  <apex:pageBlock >
+    <apex:pageBlockSection title="Contact Page">
+      <apex:commandButton value="Old Contacts" action="{!getold}"/>
+        <apex:pageBlockTable value="{!conlist}" var="con" >
+          <apex:column value="{!con.FirstName}"/>
+          <apex:column value="{!con.Email}"/>
+          <apex:column value="{!con.Phone}"/>
+         
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+</apex:pageBlock>
+
+   <apex:pageBlock >
+    <apex:pageBlockSection title="Contact New Page ">
+      <apex:commandButton value="New Contacts" action="{!getnew}"/>
+        <apex:pageBlockTable value="{!contlist}" var="cont" >
+          <apex:column value="{!cont.FirstName}"/>
+          <apex:column value="{!cont.Email}"/>
+          <apex:column value="{!cont.Phone}"/>
+         
+</apex:pageBlockTable>
+</apex:pageBlockSection>
+</apex:pageBlock>
+
+
+</apex:form>
+</apex:page>

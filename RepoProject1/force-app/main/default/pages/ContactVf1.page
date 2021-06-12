@@ -1,0 +1,16 @@
+<apex:page controller="ContactRestApi">
+
+ <apex:form >
+  <apex:pageBlock >
+    <apex:commandButton value="Get Contacts" action="{!getcontacts}"/>
+     <apex:pageBlockTable value="{!conlist}" var="con">
+      <apex:column value="{!con.FirstName}"/>
+      <apex:column value="{!con.Email}"/>
+      <apex:column value="{!con.Phone}"/>
+
+
+    
+     </apex:pageBlockTable>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

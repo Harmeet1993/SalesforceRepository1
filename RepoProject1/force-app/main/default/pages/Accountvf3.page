@@ -1,0 +1,19 @@
+<apex:page controller="Accountcontroller1" >
+ <apex:form >
+   <apex:pageBlock >
+     <apex:pageBlockSection title="Account Details">
+         <apex:outputLabel value="Account Name" />
+        <apex:inputText value="{!AccountName}"/>
+        <apex:outputLabel value="Account Fax" />
+        <apex:inputText value="{!AccountFax}"/>
+        <apex:outputLabel value="Account Industry" />
+        <apex:inputText value="{!AccountIndustry}"/>
+        <apex:commandButton value="View Account" action="{!saveAccount}"/>
+         
+
+
+
+    </apex:pageBlockSection>
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

@@ -1,0 +1,22 @@
+<apex:page controller="AccountStandardController">
+ <apex:form >
+  <apex:pageblock >
+    <apex:pageBlockSection title="Account Info">
+      <apex:inputField value="{!acc.Name}"/>
+      <apex:inputField value="{!acc.Fax}"/>
+      <apex:inputField value="{!acc.Industry}"/>
+   
+       </apex:pageBlockSection>
+    </apex:pageblock>
+  <apex:pageblock >
+
+    <apex:pageBlockSection title="Account Details">
+       <apex:inputField value="{!acc.AccountNumber}"/>
+       <apex:inputField value="{!acc.Type}"/>
+     </apex:pageBlockSection>
+    </apex:pageblock>
+  <apex:commandButton value="Save" action="{!SaveAccount}"/>
+
+
+ </apex:form>
+</apex:page>

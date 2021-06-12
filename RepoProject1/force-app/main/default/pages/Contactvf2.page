@@ -1,0 +1,32 @@
+<apex:page controller="ContactWrapperv">
+ <apex:form >
+   <apex:pageBlock title="Contact Details">
+     <apex:pageBlockTable value="{!conwraplist}" var="con">
+          <apex:column headerValue="Select">
+          <apex:inputCheckbox value="{!con.isChecked}"/>
+          </apex:column>
+          <apex:column headerValue="FirstName" value="{!con.FirstName}"/>
+          <apex:column headerValue="LastName" value="{!con.LastName}"/>
+          <apex:column headerValue="Email" value="{!con.Email}"/>
+         
+ 
+     </apex:pageBlockTable>
+   <apex:commandButton value="Get Selected" action="{!DisplaySelected}" rerender="contactId"/>
+ </apex:pageblock>
+   
+    <apex:pageblock title="Selected Contacts">
+     <apex:pageBlockTable value="{!conselectedlist}" var="cont" id="contactId">
+       <apex:column headerValue="FirstName" value="{!cont.FirstName}"/>
+       <apex:column headerValue="LastName" value="{!cont.LastName}"/>
+       <apex:column headerValue="Email" value="{!cont.Email}"/>
+
+    </apex:pageBlockTable>
+
+   </apex:pageBlock>
+
+</apex:form>
+
+
+
+
+</apex:page>

@@ -1,0 +1,22 @@
+<apex:page controller="ApiPostalCode" >
+ 
+  <apex:form >
+     
+         <apex:commandButton value="Pincode" action="{!getpincode}"/> <br/>
+         Response is <br/>
+         {!pinmessage} 
+         
+         <apex:pageblock >
+           <apex:pageBlockTable value="{!presp}" var="pst">
+               <apex:column value="{!pst.Name}"/>
+               <apex:column value="{!pst.Region}" />
+               <apex:column value="{!pst.Block}"/>
+
+
+       </apex:pageBlockTable>
+
+       </apex:pageblock>
+         
+      
+     </apex:form>
+ </apex:page>

@@ -1,0 +1,35 @@
+<apex:page controller="Accountcontrollerv">
+ <apex:form >
+     <apex:pageBlock title="Account Information"> <br/> 
+       <apex:pageBlockSection title="Account Details Section">
+         <apex:inputField value="{!acc.Name}"/>
+         <apex:inputField value="{!acc.AccountNumber}"/>
+         <apex:inputField value="{!acc.Fax}"/>
+         <apex:inputField value="{!acc.Type}"/>
+      </apex:pageBlockSection>
+
+  <apex:pageBlockSection title="Account Details SubSection">
+     <apex:inputField value="{!acc.Rating}"/>
+     <apex:inputField value="{!acc.Phone}"/>
+     <apex:inputField value="{!acc.Ownership}"/>
+   </apex:pageBlockSection>
+
+    <apex:pageBlockSection title="Account Details SubSection 2">
+     <apex:inputField value="{!acc.Description}"/>
+     <apex:inputField value="{!acc.NumberofLocations__c}"/>
+     <apex:inputField value="{!acc.Website}"/>
+   </apex:pageBlockSection>
+
+         <apex:commandButton value="Save Account" action="{!saveAccount}"/> <br/> 
+       <apex:commandButton value="Get Account" action="{!displayAccount}"></apex:commandButton> <br/>
+     </apex:pageBlock>
+      <apex:pageblock title="Get Accounts">
+           <apex:pageBlockTable value="{!acclist}" var="acc">
+           <apex:column value="{!acc.Name}"/>
+           <apex:column value="{!acc.Fax}"/>
+           <apex:column value="{!acc.Type}"/> <br/> 
+
+      </apex:pageBlockTable>
+   </apex:pageblock>
+  </apex:form>
+</apex:page>

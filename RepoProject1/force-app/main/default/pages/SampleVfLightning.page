@@ -1,0 +1,18 @@
+<apex:page standardController="Contact">
+    <apex:includeLightning />
+ 
+    <div id="lightning" />
+ 
+    <script>
+        $Lightning.use("c:VfLightningApp", function() {
+          $Lightning.createComponent("c:Contactsearchcomp",
+              { label : "Press Me!", variant: "Brand" },
+              "lightning",
+              function(cmp) {
+                console.log("button was created");
+                // do some stuff
+              }
+          );
+        });
+    </script>
+</apex:page>
