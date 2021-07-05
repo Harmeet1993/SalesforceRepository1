@@ -1,0 +1,27 @@
+<apex:page Controller="Contactcontroller" >
+ <apex:form >
+   <apex:pageBlock title="Contact Info">
+     <apex:pageBlockSection >
+       <apex:pageBlockTable value="{!conlist}" var="con">
+         <apex:column value="{!con.FirstName}"/>
+         <apex:column value="{!con.Email}"/>
+         <apex:column value="{!con.Phone}"/>
+
+    </apex:pageBlockTable>
+  </apex:pageBlockSection>
+ </apex:pageBlock>
+
+  <apex:pageblock >
+    <apex:pageBlockSection >
+      <apex:pageBlockTable value="{!contlist}" var="cont">
+         <apex:column value="{!cont.FirstName}"/>
+         <apex:column value="{!cont.Email}"/>
+         <apex:column value="{!cont.Phone}"/>
+
+    </apex:pageBlockTable>
+    </apex:pageBlockSection>
+      <apex:commandButton value="View" action="{!getcontacts}"> </apex:commandButton>
+
+     </apex:pageblock>
+   </apex:form>
+ </apex:page>

@@ -1,0 +1,20 @@
+<apex:page controller="InsertChildAccount" >
+
+
+  <apex:form >
+   <apex:pageBlock >
+    <apex:pageBlockSection title="Account Information" >
+     <apex:commandButton value="Get Contacts" action="{!getContact}"/>
+      <apex:pageBlockTable value="{!acclist}" var="acc">
+
+          <apex:column headerValue="Name" value="{!acc.Name}"/>
+          <apex:column headerValue="Fax" value="{!acc.Fax}"/>
+          <apex:column headerValue="Id" value="{!acc.Id}"/>
+
+
+
+      </apex:pageBlockTable>
+    </apex:pageBlockSection>
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>

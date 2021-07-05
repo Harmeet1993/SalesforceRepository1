@@ -1,0 +1,23 @@
+<apex:page controller="ContactVf3Controller">
+
+ <apex:form >
+  <apex:pageBlock title="Account Details">
+   <apex:pageBlockSection >
+   <apex:outputLabel value="Account Name">
+    <apex:inputText value="{!Acc.Name}"/>
+    </apex:outputLabel>
+   <apex:outputLabel value="Account Phone">
+    <apex:inputText value="{!Acc.Phone}"/>
+   </apex:outputLabel>
+    
+  </apex:pageBlockSection>
+ </apex:pageBlock>
+
+ 
+ <apex:commandButton value="Save Account" action="{!SaveAcc}"/>
+  
+</apex:form>
+
+
+
+</apex:page>

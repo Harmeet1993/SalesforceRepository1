@@ -1,0 +1,19 @@
+<apex:page controller="InsertAccount">
+  <apex:form >
+   <apex:pageblock >
+   <apex:pageBlockButtons >
+    <apex:commandButton reRender="table1" value="Get Accounts" action="{!getaccount}"/>
+    </apex:pageBlockButtons>
+
+   <apex:pageBlockTable value="{!acclist}" var="acc" id="table1">
+
+    <apex:column headerValue="ID"   value="{!acc.Id}"/>
+    <apex:column headerValue="Name" value="{!acc.Name}"/>
+    <apex:column headerValue="Fax" value="{!acc.Fax}"/>
+
+</apex:pageBlockTable>
+
+</apex:pageblock>
+
+</apex:form>
+</apex:page>
